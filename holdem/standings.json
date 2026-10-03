@@ -1,158 +1,54 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "updated": "2026-10-03",
   "latest_game_date": "2026-10-02",
-  "periods": [
-    {
-      "id": "all",
-      "label": "All standings",
-      "school": [
-        {
-          "name": "MIT",
-          "net": 2100
-        },
-        {
-          "name": "Harvard",
-          "net": -2100
-        }
-      ],
-      "year": [
-        {
-          "name": "First years",
-          "net": -1550
-        },
-        {
-          "name": "Second years",
-          "net": 3650
-        }
-      ],
-      "ocean": [
-        {
-          "name": "Atlantic",
-          "net": 20200
-        },
-        {
-          "name": "Caribbean",
-          "net": 12600
-        },
-        {
-          "name": "Mediterranean",
-          "net": -4625
-        },
-        {
-          "name": "Baltic",
-          "net": -5825
-        },
-        {
-          "name": "Indian",
-          "net": -7375
-        },
-        {
-          "name": "Pacific",
-          "net": -12875
-        }
-      ]
-    },
-    {
-      "id": "tonight",
-      "label": "2026-10-02",
-      "school": [
-        {
-          "name": "MIT",
-          "net": 2100
-        },
-        {
-          "name": "Harvard",
-          "net": -2100
-        }
-      ],
-      "year": [
-        {
-          "name": "First years",
-          "net": -1550
-        },
-        {
-          "name": "Second years",
-          "net": 3650
-        }
-      ],
-      "ocean": [
-        {
-          "name": "Atlantic",
-          "net": null
-        },
-        {
-          "name": "Caribbean",
-          "net": 10425
-        },
-        {
-          "name": "Mediterranean",
-          "net": null
-        },
-        {
-          "name": "Baltic",
-          "net": -6000
-        },
-        {
-          "name": "Indian",
-          "net": -2325
-        },
-        {
-          "name": "Pacific",
-          "net": null
-        }
-      ]
-    },
-    {
-      "id": "opening",
-      "label": "Before October 2",
-      "school": [
-        {
-          "name": "MIT",
-          "net": 0
-        },
-        {
-          "name": "Harvard",
-          "net": null
-        }
-      ],
-      "year": [
-        {
-          "name": "First years",
-          "net": 0
-        },
-        {
-          "name": "Second years",
-          "net": null
-        }
-      ],
-      "ocean": [
-        {
-          "name": "Atlantic",
-          "net": 20200
-        },
-        {
-          "name": "Caribbean",
-          "net": 2175
-        },
-        {
-          "name": "Mediterranean",
-          "net": -4625
-        },
-        {
-          "name": "Baltic",
-          "net": 175
-        },
-        {
-          "name": "Indian",
-          "net": -5050
-        },
-        {
-          "name": "Pacific",
-          "net": -12875
-        }
-      ]
-    }
-  ],
-  "note": "Totals = chart before Oct 2 + recorded games. Earlier individual nights were not supplied."
+  "totals": {
+    "school": [
+      {
+        "name": "MIT",
+        "net": 2100
+      },
+      {
+        "name": "Harvard",
+        "net": -2100
+      }
+    ],
+    "year": [
+      {
+        "name": "First years",
+        "net": -3650
+      },
+      {
+        "name": "Second years",
+        "net": 3650
+      }
+    ],
+    "ocean": [
+      {
+        "name": "Atlantic",
+        "net": 20200
+      },
+      {
+        "name": "Caribbean",
+        "net": 12600
+      },
+      {
+        "name": "Mediterranean",
+        "net": -4625
+      },
+      {
+        "name": "Baltic",
+        "net": -5825
+      },
+      {
+        "name": "Indian",
+        "net": -7375
+      },
+      {
+        "name": "Pacific",
+        "net": -12875
+      }
+    ]
+  },
+  "note": "Cumulative net results. Class years include MIT and Harvard; oceans include MIT only."
 }
