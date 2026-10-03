@@ -1,238 +1,158 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "updated": "2026-10-03",
-  "latest_game_id": "tonight",
   "latest_game_date": "2026-10-02",
-  "opening_label": "Before Oct 2",
-  "players": [
+  "periods": [
     {
-      "id": "max",
-      "name": "Max",
-      "school": "MIT",
-      "year": 1,
-      "ocean": "Atlantic",
-      "opening_cents": 14750,
-      "total_cents": 14750,
-      "latest_cents": null
+      "id": "all",
+      "label": "All standings",
+      "school": [
+        {
+          "name": "MIT",
+          "net": 2100
+        },
+        {
+          "name": "Harvard",
+          "net": -2100
+        }
+      ],
+      "year": [
+        {
+          "name": "First years",
+          "net": -1550
+        },
+        {
+          "name": "Second years",
+          "net": 3650
+        }
+      ],
+      "ocean": [
+        {
+          "name": "Atlantic",
+          "net": 20200
+        },
+        {
+          "name": "Caribbean",
+          "net": 12600
+        },
+        {
+          "name": "Mediterranean",
+          "net": -4625
+        },
+        {
+          "name": "Baltic",
+          "net": -5825
+        },
+        {
+          "name": "Indian",
+          "net": -7375
+        },
+        {
+          "name": "Pacific",
+          "net": -12875
+        }
+      ]
     },
-    {
-      "id": "drew",
-      "name": "Drew",
-      "school": "MIT",
-      "year": 1,
-      "ocean": "Mediterranean",
-      "opening_cents": 9200,
-      "total_cents": 9200,
-      "latest_cents": null
-    },
-    {
-      "id": "carlos",
-      "name": "Carlos",
-      "school": "MIT",
-      "year": 1,
-      "ocean": "Caribbean",
-      "opening_cents": 6300,
-      "total_cents": 9250,
-      "latest_cents": 2950
-    },
-    {
-      "id": "eskil",
-      "name": "Eskil",
-      "school": "MIT",
-      "year": 1,
-      "ocean": "Atlantic",
-      "opening_cents": 5950,
-      "total_cents": 5950,
-      "latest_cents": null
-    },
-    {
-      "id": "aman",
-      "name": "Aman",
-      "school": "MIT",
-      "year": 1,
-      "ocean": "Mediterranean",
-      "opening_cents": 5650,
-      "total_cents": 5650,
-      "latest_cents": null
-    },
-    {
-      "id": "chris-ix",
-      "name": "Chris Ix",
-      "school": "MIT",
-      "year": 1,
-      "ocean": "Baltic",
-      "opening_cents": 2000,
-      "total_cents": -4000,
-      "latest_cents": -6000
-    },
-    {
-      "id": "lopo",
-      "name": "Lopo",
-      "school": "MIT",
-      "year": 1,
-      "ocean": "Atlantic",
-      "opening_cents": -500,
-      "total_cents": -500,
-      "latest_cents": null
-    },
-    {
-      "id": "jake",
-      "name": "Jake",
-      "school": "MIT",
-      "year": 1,
-      "ocean": "Caribbean",
-      "opening_cents": -1125,
-      "total_cents": 2700,
-      "latest_cents": 3825
-    },
-    {
-      "id": "thomas",
-      "name": "Thomas",
-      "school": "MIT",
-      "year": 1,
-      "ocean": "Baltic",
-      "opening_cents": -1825,
-      "total_cents": -1825,
-      "latest_cents": null
-    },
-    {
-      "id": "jens",
-      "name": "Jens",
-      "school": "MIT",
-      "year": 1,
-      "ocean": "Caribbean",
-      "opening_cents": -3000,
-      "total_cents": -3000,
-      "latest_cents": null
-    },
-    {
-      "id": "nate",
-      "name": "Nate",
-      "school": "MIT",
-      "year": 1,
-      "ocean": "Mediterranean",
-      "opening_cents": -3350,
-      "total_cents": -3350,
-      "latest_cents": null
-    },
-    {
-      "id": "niels",
-      "name": "Niels",
-      "school": "MIT",
-      "year": 1,
-      "ocean": "Indian",
-      "opening_cents": -5050,
-      "total_cents": -5050,
-      "latest_cents": null
-    },
-    {
-      "id": "sahil",
-      "name": "Sahil",
-      "school": "MIT",
-      "year": 1,
-      "ocean": "Mediterranean",
-      "opening_cents": -5625,
-      "total_cents": -5625,
-      "latest_cents": null
-    },
-    {
-      "id": "colton",
-      "name": "Colton",
-      "school": "MIT",
-      "year": 1,
-      "ocean": "Pacific",
-      "opening_cents": -6000,
-      "total_cents": -6000,
-      "latest_cents": null
-    },
-    {
-      "id": "krish",
-      "name": "Krish",
-      "school": "MIT",
-      "year": 1,
-      "ocean": "Pacific",
-      "opening_cents": -6875,
-      "total_cents": -6875,
-      "latest_cents": null
-    },
-    {
-      "id": "liam",
-      "name": "Liam",
-      "school": "MIT",
-      "year": 1,
-      "ocean": "Mediterranean",
-      "opening_cents": -10500,
-      "total_cents": -10500,
-      "latest_cents": null
-    },
-    {
-      "id": "anthony",
-      "name": "Anthony",
-      "school": "MIT",
-      "year": 1,
-      "ocean": "Indian",
-      "opening_cents": null,
-      "total_cents": -2325,
-      "latest_cents": -2325
-    },
-    {
-      "id": "hamza",
-      "name": "Hamza",
-      "school": "MIT",
-      "year": 2,
-      "ocean": "Caribbean",
-      "opening_cents": null,
-      "total_cents": 3650,
-      "latest_cents": 3650
-    },
-    {
-      "id": "mukhtar",
-      "name": "Mukhtar",
-      "school": "Harvard",
-      "year": 1,
-      "ocean": null,
-      "opening_cents": null,
-      "total_cents": -2100,
-      "latest_cents": -2100
-    }
-  ],
-  "games": [
     {
       "id": "tonight",
-      "date": "2026-10-02",
-      "results": [
+      "label": "2026-10-02",
+      "school": [
         {
-          "player_id": "anthony",
-          "net_cents": -2325
+          "name": "MIT",
+          "net": 2100
         },
         {
-          "player_id": "carlos",
-          "net_cents": 2950
+          "name": "Harvard",
+          "net": -2100
+        }
+      ],
+      "year": [
+        {
+          "name": "First years",
+          "net": -1550
         },
         {
-          "player_id": "chris-ix",
-          "net_cents": -6000
+          "name": "Second years",
+          "net": 3650
+        }
+      ],
+      "ocean": [
+        {
+          "name": "Atlantic",
+          "net": null
         },
         {
-          "player_id": "hamza",
-          "net_cents": 3650
+          "name": "Caribbean",
+          "net": 10425
         },
         {
-          "player_id": "jake",
-          "net_cents": 3825
+          "name": "Mediterranean",
+          "net": null
         },
         {
-          "player_id": "mukhtar",
-          "net_cents": -2100
+          "name": "Baltic",
+          "net": -6000
+        },
+        {
+          "name": "Indian",
+          "net": -2325
+        },
+        {
+          "name": "Pacific",
+          "net": null
+        }
+      ]
+    },
+    {
+      "id": "opening",
+      "label": "Before October 2",
+      "school": [
+        {
+          "name": "MIT",
+          "net": 0
+        },
+        {
+          "name": "Harvard",
+          "net": null
+        }
+      ],
+      "year": [
+        {
+          "name": "First years",
+          "net": 0
+        },
+        {
+          "name": "Second years",
+          "net": null
+        }
+      ],
+      "ocean": [
+        {
+          "name": "Atlantic",
+          "net": 20200
+        },
+        {
+          "name": "Caribbean",
+          "net": 2175
+        },
+        {
+          "name": "Mediterranean",
+          "net": -4625
+        },
+        {
+          "name": "Baltic",
+          "net": 175
+        },
+        {
+          "name": "Indian",
+          "net": -5050
+        },
+        {
+          "name": "Pacific",
+          "net": -12875
         }
       ]
     }
   ],
-  "reconciliation": {
-    "cumulative_net_cents": 0,
-    "latest_game_net_cents": 0,
-    "latest_game_winnings_cents": 10425,
-    "latest_game_losses_cents": 10425
-  },
   "note": "Totals = chart before Oct 2 + recorded games. Earlier individual nights were not supplied."
 }

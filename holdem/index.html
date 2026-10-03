@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#ffffff">
-  <meta name="description" content="Cambridge Hold ’Em Association standings. MIT versus Harvard, class years, oceans, and every player at the table.">
+  <meta name="description" content="Cambridge Hold ’Em Association. Net standings for MIT versus Harvard, MIT class years, and MIT oceans.">
   <title>Standings · Cambridge Hold ’Em Association</title>
   <link rel="stylesheet" href="styles.css">
   <script type="module" src="app.mjs"></script>
@@ -14,22 +14,23 @@
   <div class="page">
     <div class="site-header"><a class="site-name" href="/">Jake Stein.</a><span class="site-note">CAMBRIDGE, MA · EST. 2026</span></div>
     <nav class="back-bar" aria-label="Back to Jake’s site"><a class="lnk" href="/">← Back</a></nav>
-    <header class="masthead"><p class="eyebrow">Cambridge Hold ’Em Association</p><h1>Good cards.<br>Better company.</h1><p class="lead">The standings from our table.</p></header>
+    <header class="masthead club-brand"><div class="club-mark" aria-hidden="true">♣</div><div><h1>Cambridge Hold ’Em<br>Association</h1><p class="lead">Good cards. Better company.</p></div></header>
     <main id="standings">
       <div id="loading" role="status">Pulling up the table…</div>
       <div id="content" hidden>
-        <div class="edition"><div><p class="eyebrow">The association ledger</p><h2>Total standings</h2></div><div class="period"><label for="period">At the table</label><select id="period"><option value="all">All standings</option></select><p id="asof"></p></div></div>
-        <div class="tabs" role="tablist" aria-label="Standings breakdown">
-          <button id="tab-school" role="tab" aria-selected="true" aria-controls="panel" data-slide="school"><span>01</span> MIT vs Harvard</button>
-          <button id="tab-year" role="tab" aria-selected="false" aria-controls="panel" data-slide="year" tabindex="-1"><span>02</span> First vs second years</button>
-          <button id="tab-ocean" role="tab" aria-selected="false" aria-controls="panel" data-slide="ocean" tabindex="-1"><span>03</span> The oceans</button>
-        </div>
-        <section id="panel" class="panel" role="tabpanel" aria-labelledby="tab-school" tabindex="0"></section>
-        <div class="share"><p id="slide-note"></p><div><button id="download">↓ Save this slide</button><button id="copy">↗ Copy link</button></div></div>
+        <div class="edition"><div><p class="eyebrow">The association ledger</p><h2 id="period-title">Total standings</h2></div><div class="period"><label for="period">Period</label><select id="period"><option value="all">All standings</option></select><p id="asof"></p></div></div>
+        <div id="comparisons" class="comparisons"></div>
+        <div class="share"><p>Net winnings / losses in USD. MIT’s class-year and ocean totals each equal its school total.</p><div><button id="download">↓ Save the breakdown</button><button id="copy">↗ Copy link</button></div></div>
         <p id="action-status" class="action-status" role="status" aria-live="polite"></p>
+        <section id="member-gate" class="member-gate" aria-labelledby="member-title">
+          <div><p class="eyebrow">Group access</p><h2 id="member-title">Player leaderboard</h2><p>Join the group to get the password.</p><a class="lnk" href="mailto:steinjp@mit.edu?subject=Cambridge%20Hold%20%E2%80%99Em%20Association">Join the group ↗</a></div>
+          <form id="unlock-form"><label for="group-password">Group password</label><div class="password-field"><input type="password" id="group-password" autocomplete="off" required><button type="submit" id="unlock">Unlock ↗</button></div><p id="unlock-status" role="status" aria-live="polite"></p></form>
+        </section>
+        <div id="member-content" hidden>
+        <div class="member-controls"><span class="eyebrow">Group leaderboard unlocked</span><button id="lock" class="lnk">Lock leaderboard</button><button id="download-players" class="lnk">↓ Save player standings</button></div>
         <section class="leaderboard" aria-labelledby="leaderboard-title">
           <div class="section-heading"><div><p class="eyebrow">Every seat, every dollar</p><h2 id="leaderboard-title">The leaderboard</h2></div><a href="#latest-game" id="latest-link">October 2 game ↗</a></div>
-          <div class="filters"><label>School<select id="school-filter"><option value="all">Everyone</option><option value="MIT">MIT</option><option value="Harvard">Harvard</option></select></label><label>MIT year<select id="year-filter"><option value="all">All years</option><option value="1">First years</option><option value="2">Second years</option></select></label><label>Ocean<select id="ocean-filter"><option value="all">All oceans</option></select></label><p id="filter-count"></p></div>
+          <div class="filters"><label>School<select id="school-filter"><option value="all">Everyone</option><option value="MIT">MIT</option><option value="Harvard">Harvard</option></select></label><label>MIT year<select id="year-filter"><option value="all">All years</option><option value="1">First years</option><option value="2">Second years</option></select></label><label>Ocean<select id="ocean-filter"><option value="all">All oceans</option></select></label></div>
           <div class="ranking-heading"><span>Player</span><span>Net winnings / losses ($)</span><span>Net</span></div>
           <ol id="ranking" class="ranking"></ol>
           <p class="legend"><span class="positive-dot"></span> Up <span class="negative-dot"></span> Down · amounts are net results, in USD</p>
@@ -39,6 +40,7 @@
           <div class="game-summary" id="game-summary"></div>
           <div class="game-table-wrap"><table><caption class="sr-only">Latest game player results</caption><thead><tr><th scope="col">Player</th><th scope="col">School</th><th scope="col">Net</th></tr></thead><tbody id="game-results"></tbody><tfoot><tr><th scope="row" colspan="2">Table total</th><td id="game-total"></td></tr></tfoot></table></div>
         </section>
+        </div>
         <footer><p id="source-note"></p><p>Good cards. Better company.<br><span>Cambridge Hold ’Em Association</span></p></footer>
       </div>
     </main>
