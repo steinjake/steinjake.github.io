@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="referrer" content="no-referrer">
+<meta name="color-scheme" content="light">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' https://steinjp.com 'sha256-eSdPC1pfr+TDfrlZ3h5/uUkncggJUg9dn9XYsGRfmJo=' 'sha256-GhsiAxoyOuWYYNyQpaJJA1sisop9pS/90sdfLnxZj/I=' 'sha256-xc1vYHVLwrfrH5wrS67DXDgSq+qmQ8iJLQIJMExpTQk='; style-src 'self' https://steinjp.com 'unsafe-inline'; img-src 'self' https://steinjp.com https://tile.openstreetmap.org data: blob:; connect-src 'self'; frame-src 'self' blob:; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Private · Jake Stein</title>
+<link rel="stylesheet" href="styles.css">
+<script type="module" src="private.mjs"></script>
+</head>
+<body>
+<header class="top"><a href="/">Jake Stein</a><span>Private directory</span><button id="lock" type="button" hidden>Lock <span aria-hidden="true">↗</span></button></header>
+<main id="gate">
+<div class="eyebrow">A little corner of the internet</div>
+<h1>For me.</h1>
+<p class="intro">The plans, maps and things I want to pull up.</p>
+<form id="unlock-form">
+<label for="password">Private-page password</label>
+<div class="password-row"><input id="password" name="password" type="password" autocomplete="current-password" required spellcheck="false" autocapitalize="none" aria-describedby="status"><button id="show-password" type="button" aria-label="Show password" aria-pressed="false">Show</button></div>
+<button class="primary" id="unlock" type="submit">Open my directory <span aria-hidden="true">→</span></button>
+<p id="status" role="status" aria-live="polite">Your pages are encrypted. Unlock them here.</p>
+</form>
+<p class="small">Bookmark this page, or add it to your phone’s home screen.</p>
+<noscript><p>JavaScript is needed to unlock your pages.</p></noscript>
+</main>
+<main id="directory" hidden>
+<div class="eyebrow">The useful stuff</div><h1>My directory.</h1><p class="intro">Saved plans. Ready when I need them.</p>
+<label class="search-label" for="search">Find a page</label><input id="search" type="search" placeholder="Search pages or tags…" autocomplete="off">
+<div id="cards" class="cards"></div><p id="empty" hidden>No pages match that search.</p>
+</main>
+<section id="viewer" hidden aria-label="Private page">
+<nav class="page-nav" aria-label="Private directory"><button id="back" type="button">← My directory</button><span id="page-title"></span></nav>
+<nav id="file-nav" class="file-nav" aria-label="Private downloads"></nav>
+<div id="frame-holder"></div>
+</section>
+<footer id="shell-footer">A private shelf at steinjp.com.</footer>
+</body>
+</html>
