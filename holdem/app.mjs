@@ -1,9 +1,18 @@
 import {money,oceans,periodPlayers,groups,validatePublic,decryptMembers,sorted,escapeText as esc,poster} from './model.mjs';
+import {upcomingGames,gameLabels,seatRequestUrl} from './games.mjs';
 const $=id=>document.getElementById(id);
 let data,members=null,posterFontCss;
 const tone=n=>n>0?'up':n<0?'down':'neutral';
 const formatDate=d=>new Date(d+'T12:00:00').toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'});
 const current=()=>data.totals;
+function renderUpcomingGames(){
+  const games=upcomingGames();
+  if(!games.length)return;
+  $('upcoming-games').innerHTML=games.map(game=>{
+    const labels=gameLabels(game);
+    return `<li class="upcoming-game"><div class="game-date" aria-hidden="true"><span>${esc(labels.month)}</span><strong>${esc(labels.day)}</strong></div><div class="game-details"><h3>${esc(labels.date)}</h3><p><time datetime="${esc(game.startsAt)}">${esc(labels.time)}</time> · ${esc(game.location)}</p><a class="seat-button" href="${esc(seatRequestUrl(game))}" aria-label="Request a seat for ${esc(labels.fullDate)}">Request a seat <span aria-hidden="true">↗</span></a></div></li>`;
+  }).join('');
+}
 function bar(net,max){return `<div class="bar-field" aria-hidden="true"><div class="bar ${net<0?'negative':'positive'}" style="width:${Math.abs(net??0)/max*50}%"></div></div>`;}
 function renderComparisons(){
   const set=current(),pair=(values,kind)=>`<div class="pair ${kind}-pair">${values.map(g=>`<div class="${tone(g.net)} ${kind==='school'?'school-'+g.name:''}"><span class="group-name">${esc(g.name)}</span><strong class="group-total">${money(g.net)}</strong><span class="total-rule" aria-hidden="true"></span></div>`).join('')}</div>`;
@@ -87,6 +96,7 @@ async function download(playerView=false){
     $('action-status').textContent='Image ready. Use the download link to save it.';
   }catch{$('action-status').textContent='Could not save the image. You can still copy this page’s link.';}finally{button.disabled=false;}
 }
+renderUpcomingGames();
 try{
   const response=await fetch('./standings.json',{cache:'no-cache'});if(!response.ok)throw new Error('Could not load standings');data=validatePublic(await response.json());
   $('ocean-filter').innerHTML='<option value="all">All oceans</option>'+oceans.map(o=>`<option>${o}</option>`).join('');

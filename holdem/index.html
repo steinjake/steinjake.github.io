@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#ffffff">
-  <meta name="description" content="Cambridge Hold ’Em Association. Net standings for MIT versus Harvard, MIT class years, and MIT oceans.">
+  <meta name="theme-color" content="#f6f2e9">
+  <meta name="description" content="Cambridge Hold ’Em Association. Request a seat at an upcoming table and see MIT versus Harvard, MBA-year, and MIT-ocean standings.">
   <title>Standings · Cambridge Hold ’Em Association</title>
   <link rel="stylesheet" href="styles.css">
   <script type="module" src="app.mjs"></script>
@@ -15,6 +15,10 @@
     <div class="site-header"><a class="site-name" href="/">Jake Stein.</a><span class="site-note">CAMBRIDGE, MA · EST. 2026</span></div>
     <nav class="back-bar" aria-label="Back to Jake’s site"><a class="lnk" href="/">← Back</a></nav>
     <header class="masthead club-brand"><img class="club-mark" src="images/cambridge-emblem.png" alt="" width="190" height="150"><div><h1>Cambridge Hold ’Em<br>Association</h1><p class="lead">Cambridge, Massachusetts</p></div></header>
+    <section class="play" id="play" aria-labelledby="play-title">
+      <div class="play-intro"><p class="eyebrow">Take a seat</p><h2 id="play-title">Want to play?</h2><p class="play-lead">Request a seat at a future table.</p><p class="play-note">New faces welcome. First come, first served.<br>Jake will confirm your spot and share the details.</p></div>
+      <div class="play-schedule"><ol class="upcoming-games" id="upcoming-games"><li class="game-empty"><p>Ask about the next table.</p><a class="seat-button" href="mailto:steinjp@mit.edu?subject=Cambridge%20Hold%20%E2%80%99Em%20%E2%80%94%20future%20seat%20request&amp;body=Hey%20Jake%2C%0D%0A%0D%0AI%27d%20like%20a%20seat%20at%20a%20future%20poker%20game.%20Please%20let%20me%20know%20what%27s%20coming%20up.">Request a future seat <span aria-hidden="true">↗</span></a></li></ol><p class="request-note">Opens a prefilled email to Jake. Tap Send to request your spot.</p></div>
+    </section>
     <main id="standings">
       <div id="loading" role="status">Pulling up the table…</div>
       <div id="content" hidden>
