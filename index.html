@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jake Stein</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23c8f53c'/%3E%3Ctext x='32' y='42' font-family='Helvetica,Arial' font-size='28' text-anchor='middle' fill='%23111'%3EJS%3C/text%3E%3C/svg%3E">
-  <meta name="description" content="Jake Stein: grad student hacking on projects at MIT, founder of Tryps and Bright Connect, formerly at McKinsey working on deals, AI go-to-market and growth.">
+  <meta name="description" content="Jake Stein: MIT Sloan MBA student and co-founder of DeFaria &amp; Stein, previously founder of Tryps and Bright Connect, formerly at McKinsey working on deals, AI go-to-market and growth.">
   <script>document.documentElement.classList.add('js');</script>
   <style>
     /* Embedded font: Plus Jakarta Sans (SIL Open Font License 1.1) */
@@ -120,6 +120,34 @@
       font-size: var(--big); font-weight: 400;
       letter-spacing: -0.025em; line-height: 1.08;
       outline: none;
+    }
+    #ds {
+      --paper: #fff;
+      --ds-blue: #002fa7;
+      color: #000;
+    }
+    #ds .ds-header {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 18px clamp(24px, 5vw, 68px);
+      max-width: 54rem;
+      margin: 0 0 1.5rem;
+      padding: 0.5rem 0 1.25rem;
+      border-bottom: 1px solid var(--ds-blue);
+    }
+    #ds .kicker, #ds h2 {
+      font-family: Copperplate, "Copperplate Gothic Light", Georgia, serif;
+      font-weight: 400;
+      letter-spacing: 0.055em;
+    }
+    #ds h2 { font-size: clamp(30px, 5vw, 66px); }
+    #ds .kicker, #ds .ds-mark, #ds .back, #ds .out { color: var(--ds-blue); }
+    #ds .lead { margin-bottom: 0; }
+    #ds .ds-mark { display: block; width: clamp(88px, 18vw, 190px); height: auto; }
+    @media (max-width: 560px) {
+      #ds .ds-header { grid-template-columns: minmax(0, 1fr); }
+      #ds .ds-mark { grid-row: 1; }
     }
     .panel h2 .ico-img { height: 0.62em; vertical-align: 0.02em; margin-right: 0.22em; }
     .panel h3 {
@@ -481,9 +509,10 @@
             <div class="ts" aria-hidden="true">iMessage<br><b>Today</b> 9:41 AM</div>
             <div class="message-list" role="log" aria-label="Messages from Jake" aria-live="polite" aria-relevant="additions" aria-atomic="false">
               <p class="bub tail received-message" data-message="1">Hi, I’m <a class="lnk" href="https://x.com/StakeJein" target="_blank" rel="noopener noreferrer">Jake Stein</a>, a grad student <a class="lnk" href="#hacking">hacking on projects</a> at <a class="lnk" href="#mit">MIT</a>.</p>
-              <p class="bub tail received-message" data-message="2">Previously, I founded <a class="lnk" href="#tryps">Tryps</a> and <a class="lnk" href="#bright">Bright Connect</a>.</p>
-              <p class="bub tail received-message" data-message="3">At McKinsey, I worked on <a class="lnk" href="#deals">deals</a>, <a class="lnk" href="#ai">AI go-to-market</a> and <a class="lnk" href="#growth">growth</a>.</p>
-              <p class="bub tail received-message" data-message="4">I host weekly poker games through the <a class="lnk" href="/holdem/">Cambridge Hold ’em Association</a>.</p>
+              <p class="bub tail received-message" data-message="2">I co-founded <a class="lnk" href="#ds">DeFaria &amp; Stein</a>. We make and distribute short clips for internet TV networks and artists.</p>
+              <p class="bub tail received-message" data-message="3">Previously, I founded <a class="lnk" href="#tryps">Tryps</a> and <a class="lnk" href="#bright">Bright Connect</a>.</p>
+              <p class="bub tail received-message" data-message="4">At McKinsey, I worked on <a class="lnk" href="#deals">deals</a>, <a class="lnk" href="#ai">AI go-to-market</a> and <a class="lnk" href="#growth">growth</a>.</p>
+              <p class="bub tail received-message" data-message="5">I host weekly poker games through the <a class="lnk" href="/holdem/">Cambridge Hold ’em Association</a>.</p>
             </div>
             <div class="typing-indicator" id="typing-indicator" aria-hidden="true" hidden><span></span><span></span><span></span></div>
             </div>
@@ -550,6 +579,25 @@
         <p>Outside class, I’m <a class="lnk" href="#hacking">hacking on projects</a> and hosting the <a class="lnk" href="/holdem/">Cambridge Hold ’em Association</a>.</p>
       </div>
       <figure class="sloan"><img data-asset="logo-sloan" alt="MIT Sloan School of Management"></figure>
+    </div>
+  </section>
+
+  <section class="panel" id="ds" role="dialog" aria-modal="true" aria-labelledby="t-ds">
+    <div class="bar"><a class="lnk back" href="#" data-close>← Back</a></div>
+    <div class="inner">
+      <header class="ds-header">
+        <div>
+          <p class="kicker">Co-founder</p>
+          <h2 id="t-ds" tabindex="-1">DeFaria &amp; Stein</h2>
+          <p class="lead">We help internet TV networks and artists reach new audiences with short clips from their long videos.</p>
+        </div>
+        <svg class="ds-mark" width="400" height="400" viewBox="0 0 400 400" aria-hidden="true"><defs><g id="ds-mark-loop"><path d="M200 200L102 200A32 32 0 0 1 102 136L298 136A24 24 0 0 1 322 160L322 170"/><path d="M322 170C322 182 311 188 300 189"/><path d="M322 170C322 182 333 188 346 188"/></g><g id="ds-mark-flourish"><path d="M150 84C150 66 138 58 122 56"/><path d="M150 84C150 66 162 58 178 56"/></g></defs><circle cx="200" cy="200" r="186" fill="none" stroke="currentColor" stroke-width="4"/><g transform="translate(200 200) scale(1.02) translate(-200 -200)" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"><use href="#ds-mark-loop"/><use href="#ds-mark-loop" transform="rotate(180 200 200)"/><path d="M150 84L150 316"/><use href="#ds-mark-flourish"/><use href="#ds-mark-flourish" transform="matrix(1 0 0 -1 0 400)"/><path d="M150 92L208 92C236 92 254 110 254 138L254 262C254 290 236 308 208 308L150 308"/></g></svg>
+      </header>
+      <div class="body">
+        <p>I co-founded D&amp;S with Sean DeFaria, a director and editor. We cut short clips and distribute them through fan pages and clip bounty programs, where creators get paid to make and share clips.</p>
+        <p>I’m building software that connects each published clip to the moment it came from, how it was edited, and how it performed. The goal is to use what happened on the last episode to make better decisions about what to clip next and where to post it.</p>
+      </div>
+      <div class="outs"><a class="lnk out" href="https://defariastein.com/">Visit DeFaria &amp; Stein ↗</a></div>
     </div>
   </section>
 
@@ -1009,6 +1057,8 @@
         after(6100, function () { receive(2); });
         after(7300, function () { startTyping(3); });
         after(8300, function () { receive(3); });
+        after(9500, function () { startTyping(4); });
+        after(10500, function () { receive(4); });
       }
       document.getElementById('replay-messages').addEventListener('click', play);
       document.getElementById('show-messages').addEventListener('click', showAll);
