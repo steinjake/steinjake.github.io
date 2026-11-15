@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jake Stein</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23c8f53c'/%3E%3Ctext x='32' y='42' font-family='Helvetica,Arial' font-size='28' text-anchor='middle' fill='%23111'%3EJS%3C/text%3E%3C/svg%3E">
-  <meta name="description" content="Jake Stein: grad student hacking on projects at MIT, founder of Tryps and Bright Connect, formerly at McKinsey working on deals, AI go-to-market and growth.">
+  <meta name="description" content="Jake Stein: MIT Sloan MBA student and co-founder of DeFaria &amp; Stein, previously founder of Tryps and Bright Connect, formerly at McKinsey working on deals, AI go-to-market and growth.">
   <script>document.documentElement.classList.add('js');</script>
   <style>
     /* Embedded font: Plus Jakarta Sans (SIL Open Font License 1.1) */
@@ -481,9 +481,10 @@
             <div class="ts" aria-hidden="true">iMessage<br><b>Today</b> 9:41 AM</div>
             <div class="message-list" role="log" aria-label="Messages from Jake" aria-live="polite" aria-relevant="additions" aria-atomic="false">
               <p class="bub tail received-message" data-message="1">Hi, I’m <a class="lnk" href="https://x.com/StakeJein" target="_blank" rel="noopener noreferrer">Jake Stein</a>, a grad student <a class="lnk" href="#hacking">hacking on projects</a> at <a class="lnk" href="#mit">MIT</a>.</p>
-              <p class="bub tail received-message" data-message="2">Previously, I founded <a class="lnk" href="#tryps">Tryps</a> and <a class="lnk" href="#bright">Bright Connect</a>.</p>
-              <p class="bub tail received-message" data-message="3">At McKinsey, I worked on <a class="lnk" href="#deals">deals</a>, <a class="lnk" href="#ai">AI go-to-market</a> and <a class="lnk" href="#growth">growth</a>.</p>
-              <p class="bub tail received-message" data-message="4">I host weekly poker games through the <a class="lnk" href="/holdem/">Cambridge Hold ’em Association</a>.</p>
+              <p class="bub tail received-message" data-message="2">I co-founded <a class="lnk" href="#ds">DeFaria &amp; Stein</a>. We make and distribute short clips for internet TV networks and artists.</p>
+              <p class="bub tail received-message" data-message="3">Previously, I founded <a class="lnk" href="#tryps">Tryps</a> and <a class="lnk" href="#bright">Bright Connect</a>.</p>
+              <p class="bub tail received-message" data-message="4">At McKinsey, I worked on <a class="lnk" href="#deals">deals</a>, <a class="lnk" href="#ai">AI go-to-market</a> and <a class="lnk" href="#growth">growth</a>.</p>
+              <p class="bub tail received-message" data-message="5">I host weekly poker games through the <a class="lnk" href="/holdem/">Cambridge Hold ’em Association</a>.</p>
             </div>
             <div class="typing-indicator" id="typing-indicator" aria-hidden="true" hidden><span></span><span></span><span></span></div>
             </div>
@@ -550,6 +551,19 @@
         <p>Outside class, I’m <a class="lnk" href="#hacking">hacking on projects</a> and hosting the <a class="lnk" href="/holdem/">Cambridge Hold ’em Association</a>.</p>
       </div>
       <figure class="sloan"><img data-asset="logo-sloan" alt="MIT Sloan School of Management"></figure>
+    </div>
+  </section>
+
+  <section class="panel" id="ds" role="dialog" aria-modal="true" aria-labelledby="t-ds">
+    <div class="bar"><a class="lnk back" href="#" data-close>← Back</a></div>
+    <div class="inner">
+      <p class="kicker">Co-founder</p>
+      <h2 id="t-ds" tabindex="-1">DeFaria &amp; Stein</h2>
+      <p class="lead">We help internet TV networks and artists reach new audiences with short clips from their long videos.</p>
+      <div class="body">
+        <p>I co-founded D&amp;S with Sean DeFaria, a director and editor. We cut short clips and distribute them through fan pages and clip bounty programs, where creators get paid to make and share clips.</p>
+        <p>I’m building software that connects each published clip to the moment it came from, how it was edited, and how it performed. The goal is to use what happened on the last episode to make better decisions about what to clip next and where to post it.</p>
+      </div>
     </div>
   </section>
 
@@ -1009,6 +1023,8 @@
         after(6100, function () { receive(2); });
         after(7300, function () { startTyping(3); });
         after(8300, function () { receive(3); });
+        after(9500, function () { startTyping(4); });
+        after(10500, function () { receive(4); });
       }
       document.getElementById('replay-messages').addEventListener('click', play);
       document.getElementById('show-messages').addEventListener('click', showAll);
